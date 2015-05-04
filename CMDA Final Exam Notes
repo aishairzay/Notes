@@ -11,6 +11,7 @@ Data Processing:
     dictionary
     table (Cardinality, Dimensions)
           (n, p)
+
 Data Transformations:
   List
     sort
@@ -19,4 +20,119 @@ Data Transformations:
     reduce
     vectorize
   Table
-    Join by a unique identifier
+    Join by a unique identifier 
+      -> increasing columns, preserving # of rows
+    Pivot
+    Aggregate (group-by)
+    Transpose
+    Union
+      -> increasing rows, preserving # of columns
+    Selection
+      -> selecting rows from a table, filtering for rows
+    Projection
+      -> selecting fewer dimensions (columns) from the table
+
+Data Cleaning:
+  Masking
+  Imputation - filling in missing data
+
+Data Programming Concepts:
+  Functional Programming
+  Applying functions to data
+  List comprehensions
+      [expr(e) for e in list]
+  Vector Programming
+
+Data Visualization:
+  Mapping Data table -> graphics
+    -step 1: rows become marks (map each student to a doc)
+    -step 2: columns become visual attributes of the marks
+      - 4 kinds of marks (PLAG)
+        - Points
+        - Lines
+        - Area
+        - Volume (just area with another dimension)
+        - Glyphs
+  Expressiveness & Effectiveness
+    Different marks have different levels of effectiviness
+      - Order of effectiveness
+        1. Position
+        2. Length
+        3 or 4. Size
+        4 or 4. Color
+    Expressiveness -> may have more than 1 type of data for example: quantitative vs qualitative data
+      Some visual attributes may over-express our data.
+      Must choose channels that express what we need.
+  Low-Dimensional Plots
+    - Histograms (good for 1 dimension)
+    - Scatter (good for 2 dimensions)
+    - Bar, stack (few dimensions)
+  Multi-Dimensional Plots
+    - Tabular - HeatMap (Show with colors in a nice table)
+    - Glyph
+    - Axis Arrangement
+      - using parallel coordinates
+    - Multiple Views
+      - Make a bunch of scatterplots or something in a nice/organized way
+      - SPLOMS -> Scatter plot matrices
+        - Brushing and Linking with these, to see the same values among different dimensions
+    - Interactive Filter
+      - Dynamic Queries (DQ)
+        - sliders to filter out data on specific attributes
+
+Visual Programming Concepts
+  Event Based Programming - responding/callback for when the mouse or something is clicked
+  Picking - when we specifically click on data elements
+
+Data Analytics
+  Low-Dimension analytics
+    - 1D-means
+    - 2D-correlation
+  Feature Scaling
+  Metrics
+    - Distance Metric
+      - Euclidian
+      - Taxi Cab Metric (Manhattan distance)
+      - Categorial Data (distance between male and female?)
+    - Distance Matrix
+      - Distance between all pairs of data points
+      - Provides matrix of size n X n (number of rows by number of rows)
+    - Dim Reduction
+      - MDS - Multi-Dimensional Scaling
+          - Finding a lower dimensional representation of those data points that represents the high-level distance between the data points
+          - Error in the plot = Sum of (all low dimensional distances - all high dimensional distances)
+            - goal is to minimize this error, then show the data.
+      - PCA - maximizing variance
+      - n-Clustering
+        - Kmeans -> K = how many clusters to look for
+          - Tries to find K centroids such that the distance of all the data to its nearest centroid summed up is minimized.
+
+Text Analytics
+  - Vector Space Model
+    - p is number of words
+    - n is the documents
+    Creates a bag of words
+    - Doc x term frequency matrix
+    - TF-IDF metric for term frequency - inverse document frequency
+      - how many documents contain that word?
+        - all contain it -> not such a useful word in that data set
+      - only some docs contain it?
+        - can mean something
+      - = (Term frequency) * (inverse document frequency)
+  - Stop words
+    - filter out boring words
+  - Sentiment Analysis
+    - counting positive words
+    - counting negative words
+  - Similarity Metrics
+    - cos similarity metrics -> Dot product of the two vectors
+
+Web Scraping - beautifulsoup
+  - Navigate HTML tree
+  - Search on unique tags or attributes
+
+Questions:
+
+Short answer - working previous notes - understanding concepts and the math for them and all
+
+Can bring in one piece of paper 
