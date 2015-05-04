@@ -1,0 +1,22 @@
+CMDA Final Exam topics
+
+Process:
+  Sensemaking loop
+  Fundamental analytical tasks ( read paper about it - stasko )
+
+Data Processing:
+  Data Structures
+    lists
+    tuple
+    dictionary
+    table (Cardinality, Dimensions)
+          (n, p)
+Data Transformations:
+  List
+    sort
+    map
+    filter
+    reduce
+    vectorize
+  Table
+    Join by a unique identifier
